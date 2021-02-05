@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FastFood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/ffood-profile.png" alt="" / width="125px">
+                </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+
+                <img src="images/cart.png" alt="" width="30px" height="30px" />
+            </a>
+            <img src="images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/pasta.jpg" alt="" width="100%" id="ProductImg">
+            </div>
+
+        </div>
+        <div class="col-2">
+            <p>Home / Monthly Menu</p>
+            <h1>Monthly Menu</h1>
+            <h4>SEK.3999</h4>
+            <select>
+                <option>Select Size</option>
+                <option>5+persons</option>
+                <option>4 persons</option>
+                <option>3 persons</option>
+                <option>2 persons</option>
+                <option>1 person</option>
+            </select>
+            <input type="number" value="1">
+            <a href="" class="btn">Add to Cart</a>
+            <h3>Product Details <i class="fa fa-indent"></i></h3>
+            <br>
+            <p>
+                This months monthly menu:<br>
+                <strong>Will be sent via email after purchase or contact us for a pdf document</strong>
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/ffood-profile.png" alt="">
+                    <p>Our purpose is to give the best quality product to the customer and bring them back and make them
+                        happy.</p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &copy; 2020 - www.fastfood.se</p>
+        </div>
+    </div>
+
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <script>
+
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function () {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function () {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+
+
+</body>
+
+</html>
